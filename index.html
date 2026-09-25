@@ -1,87 +1,516 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Online Book Store</title>
+
+    <title>ABC Online Book Store</title>
+
+    <style>
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+
+            background-image: url("books-background.jpg");
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .container {
+            width: 85%;
+            margin: auto;
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 20px;
+        }
+
+
+        header {
+            text-align: center;
+            background-color: #4b2e83;
+            color: white;
+            padding: 25px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 40px;
+        }
+
+        header p {
+            font-size: 18px;
+        }
+
+
+        nav {
+            text-align: center;
+            background-color: #f4a261;
+            padding: 15px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            margin: 15px;
+        }
+
+        nav a:hover {
+            color: #4b2e83;
+        }
+
+        h2 {
+            color: #4b2e83;
+            text-align: center;
+            border-bottom: 2px solid #f4a261;
+            padding-bottom: 8px;
+        }
+
+
+        .welcome {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .search {
+            text-align: center;
+            padding: 15px;
+        }
+
+        .search input {
+            width: 60%;
+            padding: 12px;
+            border: 1px solid #aaa;
+        }
+
+        .search button {
+            padding: 12px 20px;
+            background-color: #4b2e83;
+            color: white;
+            border: none;
+        }
+
+
+        .categories {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .category {
+            background-color: #eee;
+            padding: 15px 25px;
+            border-radius: 10px;
+            color: #4b2e83;
+            font-weight: bold;
+        }
+
+
+        .books {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .book-card {
+            width: 220px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 4px 10px gray;
+        }
+
+        .book-card img {
+            width: 150px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .book-card h3 {
+            color: #4b2e83;
+        }
+
+        .price {
+            color: green;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        th, td {
+            border: 1px solid #555;
+            padding: 12px;
+        }
+
+        th {
+            background-color: #4b2e83;
+            color: white;
+        }
+
+
+        .offer {
+            background-color: #ffe5b4;
+            text-align: center;
+            padding: 25px;
+            margin: 20px;
+            border-radius: 10px;
+        }
+
+        .offer h2 {
+            color: #d35400;
+            border: none;
+        }
+
+
+        .feedback {
+            width: 60%;
+            margin: auto;
+            background-color: #f8f8f8;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        .feedback label {
+            font-weight: bold;
+        }
+
+        .feedback input,
+        .feedback select,
+        .feedback textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 7px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        .feedback textarea {
+            height: 100px;
+        }
+
+        .feedback button {
+            background-color: #4b2e83;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+        }
+
+
+        .contact {
+            text-align: center;
+            background-color: #eee;
+            padding: 20px;
+        }
+
+
+        footer {
+            text-align: center;
+            background-color: #4b2e83;
+            color: white;
+            padding: 15px;
+        }
+
+    </style>
+
 </head>
+
 
 <body>
 
-    <center>
+<div class="container">
 
-        <h1>ABC Online Book Store</h1>
+    <header>
+
+        <h1>📚 ABC Online Book Store</h1>
 
         <p>Your Online Destination for Books</p>
 
-        <hr>
+    </header>
 
-        <a href="#">Home</a> |
-        <a href="#">Books</a> |
-        <a href="#">Categories</a> |
-        <a href="#">Offers</a> |
+    <nav>
+
+        <a href="#">Home</a>
+        <a href="#">Books</a>
+        <a href="#">Categories</a>
+        <a href="#">Offers</a>
         <a href="#">Contact Us</a>
 
-        <hr>
+    </nav>
 
-    </center>
+    <section class="welcome">
 
-    <h2>Welcome to ABC Online Book Store</h2>
+        <h2>Welcome to ABC Online Book Store</h2>
 
-    <p>
-        Find books from different categories including technology,
-        programming, fiction, business and education.
-    </p>
+        <p>
+            Discover amazing books from different categories.
+            Find your favorite books at affordable prices and
+            enjoy reading every day.
+        </p>
 
-    <h2>Book Categories</h2>
+    </section>
 
-    <ul>
-        <li>Programming</li>
-        <li>Computer Science</li>
-        <li>Business</li>
-        <li>Fiction</li>
-        <li>Competitive Exams</li>
-    </ul>
+    <section class="search">
 
-    <h2>Popular Books</h2>
+        <h2> Find Your Favorite Book</h2>
 
-    <table border="1">
+        <input type="text"
+               placeholder="Search for a book...">
 
-        <tr>
-            <th>Book Name</th>
-            <th>Author</th>
-            <th>Price</th>
-        </tr>
+        <button>Search</button>
 
-        <tr>
-            <td>Python Programming</td>
-            <td>John Smith</td>
-            <td>₹450</td>
-        </tr>
+    </section>
 
-        <tr>
-            <td>Web Technology</td>
-            <td>David Brown</td>
-            <td>₹500</td>
-        </tr>
+    <section>
 
-        <tr>
-            <td>Database Management</td>
-            <td>Robert Lee</td>
-            <td>₹550</td>
-        </tr>
+        <h2> Book Categories</h2>
 
-    </table>
+        <div class="categories">
 
-    <h2>Special Offer</h2>
+            <div class="category">
+                Programming
+            </div>
 
-    <p>
-        Get 20% discount on selected books.
-    </p>
+            <div class="category">
+                Computer Science
+            </div>
 
-    <hr>
+            <div class="category">
+                Business
+            </div>
 
-    <center>
+            <div class="category">
+                Fiction
+            </div>
+
+            <div class="category">
+                Competitive Exams
+            </div>
+
+        </div>
+
+    </section>
+
+    <section>
+
+        <h2> Featured Books</h2>
+
+        <div class="books">
+
+            <div class="book-card">
+
+                <img src="python-book.jpg"
+                     alt="Python Programming Book">
+
+                <h3>Python Programming</h3>
+
+                <p>Author: John Smith</p>
+
+                <p class="price">₹450</p>
+
+            </div>
+
+
+            <div class="book-card">
+
+                <img src="web-book.jpg"
+                     alt="Web Technology Book">
+
+                <h3>Web Technology</h3>
+
+                <p>Author: David Brown</p>
+
+                <p class="price">₹500</p>
+
+            </div>
+
+
+            <div class="book-card">
+
+                <img src="database-book.jpg"
+                     alt="Database Management Book">
+
+                <h3>Database Management</h3>
+
+                <p>Author: Robert Lee</p>
+
+                <p class="price">₹550</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+    <section>
+
+        <h2> Popular Books</h2>
+
+        <table>
+
+            <tr>
+
+                <th>Book Name</th>
+                <th>Author</th>
+                <th>Category</th>
+                <th>Price</th>
+
+            </tr>
+
+            <tr>
+
+                <td>Python Programming</td>
+                <td>John Smith</td>
+                <td>Programming</td>
+                <td>₹450</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Web Technology</td>
+                <td>David Brown</td>
+                <td>Computer Science</td>
+                <td>₹500</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Database Management</td>
+                <td>Robert Lee</td>
+                <td>Computer Science</td>
+                <td>₹550</td>
+
+            </tr>
+
+        </table>
+
+    </section>
+
+
+
+    <section class="offer">
+
+        <h2> Special Offer</h2>
+
+        <p>
+            Get <strong>20% discount</strong> on selected books!
+        </p>
+
+        <p>
+            Grab your favorite book before the offer ends.
+        </p>
+
+    </section>
+
+    <section>
+
+        <h2> Customer Feedback</h2>
+
+        <div class="feedback">
+
+            <form>
+
+                <label>Full Name:</label>
+
+                <input type="text"
+                       name="name"
+                       placeholder="Enter your name">
+
+
+                <label>Email:</label>
+
+                <input type="email"
+                       name="email"
+                       placeholder="Enter your email">
+
+
+                <label>Favorite Book Category:</label>
+
+                <select name="category">
+
+                    <option>Select Category</option>
+                    <option>Programming</option>
+                    <option>Computer Science</option>
+                    <option>Business</option>
+                    <option>Fiction</option>
+                    <option>Competitive Exams</option>
+
+                </select>
+
+
+                <label>Rate Our Store:</label>
+
+                <select name="rating">
+
+                    <option>Select Rating</option>
+                    <option>⭐⭐⭐⭐⭐ Excellent</option>
+                    <option>⭐⭐⭐⭐ Very Good</option>
+                    <option>⭐⭐⭐ Good</option>
+                    <option>⭐⭐ Average</option>
+                    <option>⭐ Poor</option>
+
+                </select>
+
+
+                <label>Your Feedback:</label>
+
+                <textarea name="feedback"
+                          placeholder="Write your feedback here...">
+                </textarea>
+
+
+                <div style="text-align: center;">
+
+                    <button type="submit">
+                        Submit Feedback
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <section class="contact">
+
+        <h2> Contact Us</h2>
+
+        <p>Email: abcbookstore@gmail.com</p>
+
+        <p>Phone: 9876543210</p>
+
+        <p>Address: Main Market, Jaipur, Rajasthan</p>
+
+    </section>
+
+    <footer>
+
         <p>© 2026 ABC Online Book Store</p>
-    </center>
+
+        <p>Read More • Learn More • Explore More</p>
+
+    </footer>
+
+</div>
 
 </body>
+
 </html>
